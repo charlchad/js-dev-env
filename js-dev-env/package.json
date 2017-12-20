@@ -4,7 +4,9 @@
   "description": "JS Development Environment",
   "scripts": {
     "prestart": "node ./buildScripts/startMessage.js",
-    "start": "node ./buildScripts/srcServer.js"
+    "start": "node ./buildScripts/srcServer.js",
+    "share": "lt --port 3000",
+    "security-check": "nsp check"
   },
   "author": "Charles Chademana",
   "license": "MIT",
