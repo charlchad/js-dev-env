@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JS Development Environment",
   "scripts": {
+    "prestart": "node ./buildScripts/startMessage.js",
     "start": "node ./buildScripts/srcServer.js"
   },
   "author": "Charles Chademana",
