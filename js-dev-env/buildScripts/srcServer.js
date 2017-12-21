@@ -21,6 +21,7 @@ app.listen(port, (err) => {
   if (err) {
     console.log(err);
   } else {
-    open(`http://localhost: ${port}`);
+    /* eslint-disable prefer-template */
+    open('http://localhost:' + port);
   }
 });
