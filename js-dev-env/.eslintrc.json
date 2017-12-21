@@ -32,6 +32,7 @@
     "no-console": 1,
     "no-debugger": 1,
     "no-unreachable": 1,
+    "quotes": [2, "single"],
     "semi": [1, "always"],
     "no-cond-assign": 1,
     "lines-around-comment": [
