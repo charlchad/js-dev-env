@@ -12,7 +12,8 @@
     "security-check": "nsp check",
     "localtunnel": "lt --port 3000 --subdomain charles",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "generate-mock-data": "babel-node ./buildScripts/generateMockData"
   },
   "author": "Charles Chademana",
   "license": "MIT",
