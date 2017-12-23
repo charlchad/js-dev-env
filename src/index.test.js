@@ -9,14 +9,14 @@ describe('Our first test', () => {
 });
 
 describe('index.html', () => {
-  it('should say hello', (done) => {
+  it('should have h1 that says Users', (done) => {
     const index = fs.readFileSync('./src/index.html', 'utf-8');
     // eslint-disable-next-line prefer-arrow-callback
     jsdom.env(index, function(err, window) { // eslint-disable-line func-names
       const h1 = window.document.getElementsByTagName('h1')[0];
 
       done();
-      expect(h1.innerHTML).to.equal('Hello, world!');
+      expect(h1.innerHTML).to.equal('Users');
       window.close();
     });
   });
