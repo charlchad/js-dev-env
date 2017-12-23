@@ -4,3 +4,4 @@ node_js:
 
 scripts: 
   npm test
+  make
