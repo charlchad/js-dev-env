@@ -18,5 +18,6 @@ fs.writeFile('./src/api/db.json', json, function(err) {
     return console.log(chalk.red(err));
   } else {
     console.log(chalk.green('Mock data generated.'));
+    console.log(chalk.green('REMEMBER TO REFRESH THE APP IF YOU DON\'T SEE ANY DATA'));
   }
 })

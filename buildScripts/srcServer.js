@@ -17,6 +17,9 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../src/index.html'));
 });
 
+app.get('/users', function(req, res) {
+  //
+})
 app.listen(port, (err) => {
   if (err) {
     console.log(err);
