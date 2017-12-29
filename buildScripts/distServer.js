@@ -8,15 +8,13 @@ import path from 'path';
 import open from 'open';
 import compression from 'compression';
 
+/* eslint-disable no-console */
+
 const port = 3000;
 const app = express();
 
 app.use(compression());
 app.use(express.static('dist'));
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
-});
 
 app.get('/users', function(req, res) { // eslint-disable-line no-unused-vars
 });
@@ -30,12 +28,14 @@ app.get('/users', function(req, res) {
   ]);
 });
 
-app.listen(port, (err) => {
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
+});
+
+app.listen(port, function(err) {
   if (err) {
-    console.log(err); // eslint-disable-line no-console
+    console.log(err);
   } else {
-    /* eslint-disable prefer-template */
     open('http://localhost:' + port);
   }
 });
-

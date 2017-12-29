@@ -1,11 +1,10 @@
 export default function getBaseUrl() {
-  // return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
   return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://mysterious-dawn-16770.herokuapp.com/';
 }
 
 function getQueryStringParameterByName(name, url) {
   if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&"); // eslint-disable-line no-useless-escape
+  name = name.replace(/[\[\]]/g, "\\$&");
   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
       results = regex.exec(url);
   if (!results) return null;

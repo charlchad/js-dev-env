@@ -1,6 +1,6 @@
+import {expect} from 'chai';
 import jsdom from 'jsdom';
 import fs from 'fs';
-import {expect} from 'chai';
 
 describe('Our first test', () => {
   it('should pass', () => {
@@ -10,14 +10,12 @@ describe('Our first test', () => {
 
 describe('index.html', () => {
   it('should have h1 that says Users', (done) => {
-    const index = fs.readFileSync('./src/index.html', 'utf-8');
-    // eslint-disable-next-line prefer-arrow-callback
-    jsdom.env(index, function(err, window) { // eslint-disable-line func-names
+    const index = fs.readFileSync('./src/index.html', "utf-8");
+    jsdom.env(index, function(err, window) {
       const h1 = window.document.getElementsByTagName('h1')[0];
-
+      expect(h1.innerHTML).to.equal("Users");
       done();
-      expect(h1.innerHTML).to.equal('Users');
       window.close();
     });
-  });
-});
+  })
+})
