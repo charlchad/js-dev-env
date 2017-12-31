@@ -16,17 +16,17 @@ const app = express();
 app.use(compression());
 app.use(express.static('dist'));
 
-app.get('/users', function(req, res) { // eslint-disable-line no-unused-vars
+app.get('/users', (req, res) => { // eslint-disable-line no-unused-vars
 });
 
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-app.listen(port, function(err) {
+app.listen(port, (err) => {
   if (err) {
     console.log(err);
   } else {
-    open('http://localhost:' + port);
+    open(`http://localhost: ${port}`);
   }
 });
