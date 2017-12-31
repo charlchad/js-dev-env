@@ -1,4 +1,5 @@
-const schema = {
+// eslint-disable-next-line import/prefer-default-export
+export const schema = {
   type: 'object',
   properties: {
     users: {
@@ -33,4 +34,4 @@ const schema = {
   required: ['users']
 };
 
-export default schema;
+
